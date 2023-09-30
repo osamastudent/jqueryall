@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <title>Set Method</title>
+    <style>
+    .main{
+    height: 300px;
+    width: 500px;
+    padding-top: 50px;
+    background-color: lemonchiffon;
+    }
+    .red{
+    background-color: red;
+    }
+    </style>
+</head>
+<body>
+<div class="main abc" id="mainid">
+
+<h1 id="idd">this heading actually</h1>
+<button id="add">addClass</button>
+<button id="remove">removeClass</button>
+<button id="toggle">toggleClass</button>
+</div>
+
+<script>
+$(document).ready(function(){
+
+$("#mainid").on({
+    "click":function(){
+    $(this).css({"background":"yellow"});
+},
+
+"mouseenter" : function(){
+    $("#idd").css({"background":"black","color":"white"});
+},
+
+"mouseout" : function(){
+    $(this).css({"background":"blue"});
+}
+});
+    // $("#add").click(function(){
+// $("#idd").addClass("red");
+// });
+
+// $("#remove").click(function(){
+// $("#idd").removeClass("red");
+// });
+
+// $("#toggle").click(function(){
+// $("#idd").toggleClass("red");
+// });
+
+});
+</script>
+</body>
+</html>

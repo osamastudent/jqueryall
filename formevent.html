@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <title>Form Event</title>
+    <!-- <style>
+        .m{
+            display: flex;
+            justify-content: center; /* Horizontally center everything */
+            align-items: center; /* Vertically center everything */
+            height: 50vh; /* Make sure the body takes up the full viewport height */
+            margin: 0;
+        }
+        .main{
+        background-color: yellow;
+        height: 250px;
+        width: 250px;
+        }
+    </style> -->
+</head>
+
+<body>
+    <div class="m">
+        <div class="main">
+            <h1>this is form Event</h1>
+            <form action="" id="sform">
+                <input type="text" name="name" id="name"><br>
+                <input type="text" name="email" id="email"><br>
+                <select name="selectid" id="selectid">
+                    <option value="option1">option1</option>
+                    <option value="option2">option2</option>
+                    <option value="option3">option3</option>
+                </select><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+    </div>
+    <h1 id="output"></h1>
+    <script>
+        $(document).ready(function () {
+            // $("#name,#email,#selectid").focus(function(){
+            // $(this).css({"background":"yellow"});
+            // });
+
+            $("#name,#email,#selectid").blur(function () {
+                $(this).css({ "background": "" });
+            });
+
+            // $("#name").change(function(){
+            // $("#name").css({"background":"black","color":"white"});
+            // var a=$("#name").val();
+            // // $("#output").append(a);
+            // $("#output").html(a);
+            // });
+
+            $("#selectid").change(function () {
+                var x = $("#selectid").val();
+                $("#output").html(x);
+            });
+
+            $("#name,#email,#selectid").select(function () {
+                $(this).css({ "background": "purple" });
+            });
+
+            $("#sform").submit(function () {
+                var n = "osama";
+                var e = "osama@gmail.com";
+                var uname = $("#name").val();
+                var uemail = $("#email").val();
+                if (uname == n && uemail == e
+                
+                ) {
+                    $("#output").html("logged in successfully <br> " + "Name: " + uname + "Email: " + uemail);
+                }
+                else {
+                    $("#output").html("wrong name and email");
+                }
+                // var name=$("#name").val();
+                // var email=$("#email").val();
+
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

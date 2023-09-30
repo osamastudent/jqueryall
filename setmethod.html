@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <title>Set Method</title>
+    <style>
+    .main{
+    height: 300px;
+    width: 500px;
+    padding-top: 50px;
+    background-color: lemonchiffon;
+    }
+    .output{
+    background-color: black;
+    color: white;
+    }
+    </style>
+</head>
+<body>
+<div class="main abc" id="mainid">
+
+    <form action="" id="sform">
+        <input type="text" name="name" id="name"> <button type="submit">submit</button>
+    </form>    
+    <h1 id="hone">this is heading one</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi corporis ea exercitationem sed eaque nulla minus ipsum placeat. Accusamus, dolorum expedita cumque maiores molestiae maxime placeat quas est voluptas dolor.</p>
+</div>
+<h2>here is your dynamic data</h2>
+<h4 id="output"></h4>
+<button id="btn">click</button>
+<script>
+$(document).ready(function(){
+$("#btn").click(function(){
+    var a=$("#mainid h1").attr('class','output');
+$("#output").html(a);
+$("#name").val("here");
+
+});
+});
+</script>
+</body>
+</html>

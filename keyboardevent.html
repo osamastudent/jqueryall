@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <title>KeyBoard Event</title>
+    <style>
+        .main{
+        background-color: yellow;
+        height: 200px;
+        width: 300px;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+<h1>KeyBoard Event</h1>
+<h2 id="show"></h2>
+</div>
+
+    <script>
+$(document).ready(function(){
+$("body").keypress(function(){
+$(this).css({"background":"black","color":"white"});
+$(".main").css({"borderRadius":"100%","textAlign":"center"});
+});
+
+
+$("body").keydown(function(){
+$("body").css({"background":"blue"});
+$("#show").append("i,am trying");
+});
+
+
+$("body").keyup(function(){
+$("body").css({"background":"green"});
+
+});
+
+});
+
+    </script>
+</body>
+</html>

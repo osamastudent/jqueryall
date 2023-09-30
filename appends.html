@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <title>Set Method</title>
+    <style>
+    .main{
+    height: 300px;
+    width: 500px;
+    padding-top: 50px;
+    background-color: lemonchiffon;
+    }
+    .red{
+    background-color: red;
+    }
+    </style>
+</head>
+<body>
+<div class="main abc" id="mainid">
+    <h1 id="idd">this heading actually</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, maiores voluptatum debitis accusantium, illum harum nam sit accusamus tenetur ipsa, dolorum minima necessitatibus voluptates non velit nostrum et magnam autem.</p>
+
+
+<button id="append">append</button>
+<button id="prepend">prepend</button>
+
+<button id="after">after</button>
+<button id="before">before</button>
+
+</div>
+
+<script>
+$(document).ready(function(){
+$("#append").click(function(event){
+
+$("#mainid").append("<h1>using append method it is used for adding heading etc in div but after content </h1>");
+});
+
+$("#prepend").click(function(){
+$("#mainid").prepend("<h1>using prepend method it is used for adding heading etc in div but before content </h1>");
+});
+
+$("#before").click(function(){
+$("#mainid").before("<h1>using before method  it is used for adding heading etc before the div </h1>");
+});
+
+
+$("#after").click(function(){
+$("#mainid").after("<h1>using after method it is used for adding heading etc after the div</h1>");
+});
+});
+</script>
+</body>
+</html>

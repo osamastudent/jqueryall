@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <title>wrap Unrap</title>
+    <style>
+        .main {
+            height: 300px;
+            width: 500px;
+            padding-top: 50px;
+            background-color: lemonchiffon;
+        }
+
+        .myclass {
+            background-color: red;
+          color: white;
+        }
+        .wrapAll{
+            background-color: black;
+            color: white;
+        }
+        .wrapInner{
+            background-color: skyblue;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main" id="mainid">
+        <h1 id="idd">wrap may parent banengay</h1>
+        
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, maiores voluptatum debitis accusantium,
+            illum harum nam sit accusamus tenetur ipsa, dolorum minima necessitatibus voluptates non velit nostrum et
+            magnam autem.</p>
+        <br>
+        <h5>osama@gmail.com</h5>
+        <h5>karachi</h5>
+        <h5>pakistan</h5>
+    </div>
+    <button id="wrap">wrap</button>
+    <button id="unwrap">Urwrap</button>
+    <button id="wrapall">wrapall</button>
+    <button id="wrapinner">wrapinner</button>
+   
+
+
+
+    <script>
+        $(document).ready(function () {
+$("#wrap").click(function(){
+$("#idd").wrap("<div class='myclass'></div>");
+});
+   
+$("#unwrap").click(function(){
+$(".main,#idd").unwrap();
+});
+
+$("#wrapall").click(function(){
+$(".main h5").wrapAll("<div class='wrapAll'></div>");
+});
+
+$("#wrapinner").click(function(){
+$(".main h5").wrapInner("<div class='wrapInner'></div>");
+});
+        });
+    </script>
+</body>
+
+</html>

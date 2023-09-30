@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accordian</title>
+    <script src="jquery.js"></script>
+    <style>
+    .accor{
+    height: 30px;
+    width: 200px;
+    background-color: aquamarine;
+    border: 1px  yellowgreen solid;
+    text-align: center;
+    line-height: 30px;
+    }
+
+    .team{
+    background-color: yellow;
+    height: 110px;
+    width: 200px;
+    border: yellowgreen 1px solid;
+    }
+    .team ul{
+    list-style-type: none;
+    }
+    </style>
+</head>
+<body>
+<div class="accor ac">pakistan</div>
+<div class="team t1">
+<ul>
+<li>babar azam</li>
+<li>rizwan</li>
+<li>fakhar zaman</li>
+<li>shadab</li>
+<li>this is accordian bar</li>
+</ul>
+</div>
+<div class="accor acc">india</div>
+<div class="team t2">
+<ul>
+    <li>virat kohli</li>
+    <li>sharma</li>
+    <li>dhoni</li>
+</ul>
+</div>
+<div class="accor">newzland</div>
+<div class="team t3">
+<ul>
+<li>guptil</li>
+<li>williamson</li>
+</ul>
+</div>
+
+</body>
+</html>
+<script>
+$(document).ready(function(){
+$(".ac").click(function(){
+$(".t1").slideToggle(1000);
+$(".t2").slideUp(1000);
+$(".t3").slideUp(1000);
+})
+$(".acc").click(function(){
+$(".t1").slideUp(1000);
+$(".t2").slideToggle(1000);
+$(".t3").slideUp(1000);
+})
+
+})
+</script>

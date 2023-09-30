@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show&hide</title>
+    <script src="jquery.js"></script>
+</head>
+<body>
+<input type="button" value="fadeToggle" class="hd"> 
+<div class="osama">
+    <h1>this is fadeout</h1>
+    <h1>fade in and fadeToggle</h1>
+</div>
+
+<input type="button" value="slideup" class="sld">
+<input type="button" value="stop" id="stp">
+<div class="slide">
+<h1>this is slde up</h1><h1>this is slde up</h1>
+<h1>this is slde dow</h1><h1>this is slde down</h1>
+</div>
+
+<input type="button" value="hide" id="hd">
+<div class="hide">
+<h2>this is hide</h2><h2>this is show</h2>
+<h2>this is only toggle</h2><h2>this is hide</h2>
+</div>
+
+
+</body>
+</html>
+<script>
+$(document).ready(function(){
+$(".hd").click(function(){
+$(".osama").fadeToggle("20000");
+})
+$(".sld").click(function(){
+$(".slide").slideToggle("slow");
+})
+
+$("#stp").stop(function(){
+$(".slide").stop(100);
+})
+$("#hd").click(function(){
+$(".hide").hide(1000);
+})
+
+})
+</script>

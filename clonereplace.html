@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <title>removeempty</title>
+    <style>
+        .main {
+            height: 300px;
+            width: 500px;
+            padding-top: 50px;
+            background-color: lemonchiffon;
+        }
+
+        .box {
+            background-color: red;
+            height: 300px;
+            width: 500px;
+            padding-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main abc" id="mainid">
+        <h1 id="idd">this heading actually</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, maiores voluptatum debitis accusantium,
+            illum harum nam sit accusamus tenetur ipsa, dolorum minima necessitatibus voluptates non velit nostrum et
+            magnam autem.</p>
+        <br>
+        <h5>osama@gmail.com</h5>
+        <h5>karachi</h5>
+        <h5>pakistan</h5>
+    </div>
+    <button id="clone">clone</button>
+    <div class="box" id="box">
+        <h3>other div</h3>
+    </div>
+
+
+
+    <script>
+        $(document).ready(function () {
+
+            $("#clone").click(function () {
+                $('#mainid h1').clone().prependTo("#box");
+                $('#mainid p').clone().appendTo("#box");
+            });
+
+            $("#clone").click(function () {
+                $("#mainid h1").replaceWith("<p>osama</p>");
+            });
+
+            $("#clone").click(function () {
+                $("#mainid p").replaceWith("<b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, maiores voluptatum debitis accusantium, illum harum nam sit accusamus tenetur ipsa, dolorum minima necessitatibus voluptates non velit nostrum et magnam autem..</b>");
+            });
+
+            $("#clone").click(function () {
+                $("<span>chnaged here all</span> <br>").replaceAll("#mainid h5");
+            });  
+
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<style>
+    .week{
+    background-color: black;
+    color: white;
+    }
+/* body{
+background-color: aliceblue;
+} */
+    .main{
+    height: 150px;
+    width: 150px;
+    
+    text-align: center;
+    background-color: lightgoldenrodyellow;
+    /* box-shadow: inset -px -2px 8px rgb(255,255,255,1),
+                inset -2px -2px 12px rgb(255,255,255,1),
+                inset 2px 2px 4px rgb(255,255,255,0.1),
+                inset 2px 2px 8px rgb(0,0,0,0.15); */
+            
+    padding: 10px;
+    border-radius: 10px;
+    border-bottom: 5px solid #bbb5b5;
+     float: left;
+      margin-left: 50px;
+    }
+</style>
+</head>
+<body>
+    <div id="album">
+        <h1>this is count down timer</h1>
+        <h5 id="timer"></h5>
+    </div>
+
+    <div class="main">
+        <h1>main</h1>
+    </div>
+
+    <div class="main">
+        <h1>main</h1>
+    </div>
+
+    <div class="main">
+        <h1>main</h1>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="countdown.js"></script>
+
+    <script type="text/javascript">
+        $('#timer').countdown('2023/08/30', function(event) {
+          $(this).html(event.strftime(' <div class="week"> %w weeks </div>'
+          + '<div class="week"> %d days </div>'
+          +'<div class="week"> %H Hours </div>'
+          +'<div class="week"> :%M Minutes </div>'
+          +'<div class="week">:%S Second </div>'));
+        });
+      </script>
+</body>
+</html>
+

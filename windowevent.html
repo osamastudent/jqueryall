@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <title>windowevent</title>
+    <style>
+    .main{
+    height: 300px;
+    width: 300px;
+    background-color: lightsalmon !important;
+    border-radius: 100px;
+    padding: 50px;
+    overflow: auto;
+    }
+    .m{
+    width: 200px;
+    }
+    </style>
+</head>
+<body>
+    <div class="main" id="main">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores ex placeat explicabo libero doloribus! Explicabo labore cumque corrupti aliquid iusto iste itaque deserunt eveniet quisquam veritatis, consequuntur nihil possimus ab?Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium magni unde ab, atque illo, deleniti explicabo mollitia odio quis delectus corrupti, dolores nulla eveniet? Quos molestias sit voluptatem fugit sed. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quidem odit corrupti ipsa repudiandae? Voluptate iusto libero soluta ipsam modi accusamus expedita laudantium, deleniti eaque recusandae numquam enim, id hic!Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, dicta eaque blanditiis nesciunt repudiandae officiis esse, aperiam molestias dolores doloribus sed molestiae laudantium illum labore neque temporibus, eveniet debitis nam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dolor, facere dicta tempore accusamus animi sapiente obcaecati architecto ipsum tempora eum impedit illum officiis. A facilis fugit cumque quas veritatis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque quas ducimus tenetur fuga tempore. Eligendi fugit accusamus nulla deserunt deleniti, odit in libero labore consequuntur doloribus, soluta ratione porro sapiente!
+        
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores ex placeat explicabo libero doloribus! Explicabo labore cumque corrupti aliquid iusto iste itaque deserunt eveniet quisquam veritatis, consequuntur nihil possimus ab?Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium magni unde ab, atque illo, deleniti explicabo mollitia odio quis delectus corrupti, dolores nulla eveniet? Quos molestias sit voluptatem fugit sed. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quidem odit corrupti ipsa repudiandae? Voluptate iusto libero soluta ipsam modi accusamus expedita laudantium, deleniti eaque recusandae numquam enim, id hic!Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, dicta eaque blanditiis nesciunt repudiandae officiis esse, aperiam molestias dolores doloribus sed molestiae laudantium illum labore neque temporibus, eveniet debitis nam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dolor, facere dicta tempore accusamus animi sapiente obcaecati architecto ipsum tempora eum impedit illum officiis. A facilis fugit cumque quas veritatis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque quas ducimus tenetur fuga tempore. Eligendi fugit accusamus nulla deserunt deleniti, odit in libero labore consequuntur doloribus, soluta ratione porro sapiente!
+    </div>
+    <h1>second paragraph</h1>
+    <div class="m">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores ex placeat explicabo libero doloribus! Explicabo labore cumque corrupti aliquid iusto iste itaque deserunt eveniet quisquam veritatis, consequuntur nihil possimus ab?Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium magni unde ab, atque illo, deleniti explicabo mollitia odio quis delectus corrupti, dolores nulla eveniet? Quos molestias sit voluptatem fugit sed. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quidem odit corrupti ipsa repudiandae? Voluptate iusto libero soluta ipsam modi accusamus expedita laudantium, deleniti eaque recusandae numquam enim, id hic!Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, dicta eaque blanditiis nesciunt repudiandae officiis esse, aperiam molestias dolores doloribus sed molestiae laudantium illum labore neque temporibus, eveniet debitis nam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dolor, facere dicta tempore accusamus animi sapiente obcaecati architecto ipsum tempora eum impedit illum officiis. A facilis fugit cumque quas veritatis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque quas ducimus tenetur fuga tempore. Eligendi fugit accusamus nulla deserunt deleniti, odit in libero labore consequuntur doloribus, soluta ratione porro sapiente!
+        
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores ex placeat explicabo libero doloribus! Explicabo labore cumque corrupti aliquid iusto iste itaque deserunt eveniet quisquam veritatis, consequuntur nihil possimus ab?Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium magni unde ab, atque illo, deleniti explicabo mollitia odio quis delectus corrupti, dolores nulla eveniet? Quos molestias sit voluptatem fugit sed. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quidem odit corrupti ipsa repudiandae? Voluptate iusto libero soluta ipsam modi accusamus expedita laudantium, deleniti eaque recusandae numquam enim, id hic!Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, dicta eaque blanditiis nesciunt repudiandae officiis esse, aperiam molestias dolores doloribus sed molestiae laudantium illum labore neque temporibus, eveniet debitis nam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dolor, facere dicta tempore accusamus animi sapiente obcaecati architecto ipsum tempora eum impedit illum officiis. A facilis fugit cumque quas veritatis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque quas ducimus tenetur fuga tempore. Eligendi fugit accusamus nulla deserunt deleniti, odit in libero labore consequuntur doloribus, soluta ratione porro sapiente!
+    <
+    </div>
+</body>
+</html>
+
+<script>
+    $(document).ready(function(){
+
+$(window).scroll(function(){
+console.log("here");
+});
+
+
+$("#main").scroll(function(){
+console.log("here");
+});
+
+
+
+    });
+</script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <title>advanceselector</title>
+</head>
+<body>
+    <div class="main">
+    <h1>this is main page</h1>
+    <div class="main">
+    <h1 id="address">karachi</h1>
+    <ul>
+    <li>one</li>
+    <li>two</li>
+    <li>three</li>
+    <li>four</li>
+    <li>five</li>
+    </ul>
+    </div>
+    </div>
+
+<script>
+    $(document).ready(function(){
+// $("ul li:lt(1)").css("border","2px solid blue");
+// $("ul li:gt(2)").css("border","2px solid");
+// $("ul li:gt(3)").css({"background":"black", "color":"white","textAlign":"center"});
+
+// $("ul li:first-child").css({"border":"2px dotted"});
+$("ul li:first").css({"border":"2px dotted"});
+// $("ul li:last").css({"backgroundColor":"lime"});
+// $("ul li:eq(3)").css({"background":"blue"});
+// $(".main").css({"background":"skyblue","border":"2px solid"});
+
+});
+</script>
+</body>
+</html>

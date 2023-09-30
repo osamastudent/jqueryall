@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav-item {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+}
+
+.nav-item a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: blue; /* Underline color */
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  transition: width 0.3s ease; /* Transition for the underline width */
+}
+
+.nav-item a.active::after {
+  width: 100%; /* Full-width underline for active item */
+}
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+          <li class="nav-item"><a href="home.html">Home</a></li>
+          <li class="nav-item"><a href="about.html">About Us</a></li>
+          <li class="nav-item"><a href="contact.html">Contact Us</a></li>
+          <!-- Add more menu items as needed -->
+        </ul>
+      </nav>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $('.nav-item').click(function(event) {
+      event.preventDefault(); // Prevent default link behavior
+
+      $('.nav-item a').removeClass('active');
+      $(this).find('a').addClass('active');
+
+      // Get the target from the href attribute and scroll to it
+      var target = $(this).find('a').attr('href');
+      $('html, body').animate({
+        scrollTop: $(target).offset().top
+      }, 500); // Adjust scroll speed as needed
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <title>removeempty</title>
+<style>
+    .main{
+        height: 300px;
+        width: 500px;
+        padding-top: 50px;
+        background-color: lemonchiffon;
+        }
+        .red{
+        background-color: red;
+        }
+        </style>
+    </head>
+    <body>
+    <div class="main abc" id="mainid">
+        <h1 id="idd">this heading actually</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, maiores voluptatum debitis accusantium, illum harum nam sit accusamus tenetur ipsa, dolorum minima necessitatibus voluptates non velit nostrum et magnam autem.</p>
+      
+    </div>
+    <h1 id="myid">here:</h1>
+    <button id="hide">hide</button>
+    <button id="show">show</button>
+     <button id="toggle">toggle</button>
+     <button id="fadeout">fadeOut</button>
+     <button id="fadein">fadeIn</button>
+     <button id="fadetoggle">fadeToggle</button>
+     <button id="fadeTo">fadeTo</button>
+     <button id="slideup">slideup</button>
+     <button id="slidedown">slidedown</button>
+      <button id="slidetoggle">slidetoggle</button>
+     
+</body>
+</html>
+
+<script>
+    $(document).ready(function(){
+
+$("#hide").click(function(){
+$("#mainid").hide("slow");
+});
+
+$("#show").click(function(){
+$("#mainid").show("slow");
+});
+
+$("#fadeout").click(function(){
+$("#mainid").fadeOut(1000,function(){
+    var a="this is call back function in fadeout";
+    $("#myid").text(a);
+    // console.log(a);
+});
+});
+
+$("#fadein").click(function(){
+$("#mainid").fadeIn(1000,function(){
+    var a="this is call back function in fadeIn";
+    $("#myid").text(a);
+});
+});
+
+
+$("#fadetoggle").click(function(){
+$("#mainid").fadeToggle(1000,function(){
+    var a="this is call back function in fadeToggle";
+    $("#myid").text(a);
+});
+});
+
+
+
+$("#fadeTo").click(function(){
+$("#mainid").fadeTo(1000,0.5,function(){
+    $("#mainid ,#idd").css({"background":"black","color":"white","borderRadius":"50%","padding":"50px"});
+    var a="this is call back function in fadeTo";
+    $("#myid").text(a);
+});
+});
+
+
+
+$("#slideup").click(function(){
+$("#mainid").slideUp(1000,function(){
+    var a="this is call back function in slideUp";
+    $("#myid").text(a);
+});
+});
+
+
+$("#slidedown").click(function(){
+$("#mainid").slideDown(1000,function(){
+    var a="this is call back function in slideDown";
+    $("#myid").text(a);
+});
+});
+
+
+$("#slidetoggle").click(function(){
+$("#mainid").slideToggle(1000,function(){
+    var a="this is call back function in slideToggle";
+    $("#myid").text(a);
+});
+});
+
+
+
+
+
+
+    });
+</script>

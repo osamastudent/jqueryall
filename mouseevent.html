@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <title>Mouse Event</title>
+    <style>
+        .main{
+        background-color: yellow;
+        height: 200px;
+        width: 300px;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+<h1>main </h1>
+</div>
+
+    <script>
+$(document).ready(function(){
+    $(".main").click(function(){
+    $(".main").css({"background":"blue"});
+});
+
+$(".main").mouseleave(function() {
+        $(this).css({"background":"black", "color":"white","textAlign":"center"});
+    });
+
+    $(".main").mouseenter(function() {
+        $(this).css({"background":"skyblue","textAlign": "center"});
+    });
+    
+$(".main").dblclick(function(){
+    $(this).css({"borderRadius":"100%", "border":"dotted"});
+});
+
+$(".main").contextmenu(function(){
+    $(this).css({
+    "background": "green",
+    "border": "dotted 20px blue"
+});
+
+
+   
+
+});
+
+
+});
+
+    </script>
+</body>
+</html>

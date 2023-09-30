@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <title>Set Method</title>
+    <style>
+    .main{
+    height: 200px;
+    width: 200px;
+    padding-top: 50px;
+    background-color: lemonchiffon;
+    }
+    .red{
+    background-color: red;
+    }
+    </style>
+</head>
+<body>
+<div class="main abc" id="mainid">
+    <h1 id="idd">this heading actually</h1>
+</div>
+<button id="animate">animate</button>
+<button id="stop">stop</button>
+<script>
+$(document).ready(function(){
+
+$("#animate").click(function(){
+$("#mainid").animate({marginLeft:'90%'},3000,function(){
+   var a="margin left";
+    $("#idd").append(a);
+});
+$("#mainid").animate({marginTop:'200px',width:"300px"},1000);
+$("#mainid").animate({marginLeft:'0px'},3000);
+$("#mainid").animate({marginTop:'0px'},1000);
+});
+
+$("#stop").click(function(){
+$("#mainid").stop(true);
+// $("#mainid").stop(true,true);
+});
+
+});
+</script>
+</body>
+</html>
+<!-- <script>
+    $(document).ready(function(){
+      function startAnimation() {
+        $("#mainid").animate({marginLeft:'90%'}, 3000, function(){
+          var a = "margin left";
+          $("#idd").append(a);
+        });
+        $("#mainid").animate({marginTop:'200px', width:"300px"}, 1000);
+        $("#mainid").animate({marginLeft:'0px'}, 3000);
+        $("#mainid").animate({marginTop:'0px'}, 1000, function() {
+          startAnimation(); // Start the animation loop again
+        });
+      }
+    
+      startAnimation(); // Start the initial animation loop
+    });
+    </script> -->

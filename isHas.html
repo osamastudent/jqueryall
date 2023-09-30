@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <link rel="icon" href="b3.jpg" height="20" >
+
+    <title> is has</title>
+   
+    <style>
+    .main{
+    height: 300px;
+    width: 500px;
+    padding-top: 50px;
+    background-color: lemonchiffon;
+    }
+    .red{
+    background-color: red;
+    }
+    </style>
+</head>
+<body>
+<div class="main abc" id="mainid">
+<ul>
+<li ><b class="oneclass">child class k upr chalta hay</b></li>
+<li>two</li>
+<li><span>three</span></li>
+<li>four</li>
+<li id="fiveid">five</li>
+<li>six</li>
+</ul>
+
+<span>this is span</span>
+</div>
+<button id="is">is</button>
+<button id="has">has</button>
+<script>
+$(document).ready(function(){
+$("#has").click(function(){
+$("li").has(".oneclass").css({"background":"yellow"});
+});
+});
+</script>
+</body>
+</html>

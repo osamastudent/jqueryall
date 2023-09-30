@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <title>Set Method</title>
+    <style>
+    .main{
+    height: 300px;
+    width: 500px;
+    padding-top: 50px;
+    background-color: lemonchiffon;
+    }
+    .red{
+    background-color: red;
+    }
+    </style>
+</head>
+<body>
+<div class="main abc" id="mainid">
+<ul>
+<li>one</li>
+<li>two</li>
+<li>three</li>
+<li>four</li>
+<li>five</li>
+<li>six</li>
+</ul>
+<p id="okk">okkkk</p>
+<p id="yes">yessss</p>
+<p id="noo">noooo</p>
+</div>
+<button id="slice">slice</button>
+<script>
+$(document).ready(function(){
+$("#slice").click(function(){
+$('ul li').slice(2,5).css({"background":"yellow"});
+$("#mainid p").not("#noo").css({"background":"black","color":"white"});
+$('#mainid p').filter("#okk").css({"background":"blue"});
+});
+});
+</script>
+</body>
+</html>
